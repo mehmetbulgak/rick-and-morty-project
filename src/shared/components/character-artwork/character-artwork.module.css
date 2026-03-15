@@ -1,0 +1,81 @@
+.frame {
+  position: relative;
+  overflow: hidden;
+  background:
+    linear-gradient(145deg, rgba(24, 189, 223, 0.18), rgba(45, 140, 255, 0.08)),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(235, 240, 246, 0.72));
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.32);
+}
+
+.card {
+  aspect-ratio: 16 / 11;
+}
+
+.circle {
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: 0.45rem solid rgba(255, 255, 255, 0.86);
+}
+
+.image {
+  object-fit: cover;
+}
+
+.placeholder {
+  position: relative;
+  display: grid;
+  height: 100%;
+  place-items: center;
+  isolation: isolate;
+}
+
+.noise,
+.glow {
+  position: absolute;
+  inset: 0;
+}
+
+.noise {
+  background:
+    radial-gradient(circle at 20% 25%, rgba(255, 255, 255, 0.76), transparent 12rem),
+    radial-gradient(circle at 80% 30%, rgba(255, 255, 255, 0.55), transparent 10rem),
+    linear-gradient(135deg, rgba(255, 255, 255, 0.14), transparent 55%);
+}
+
+.glow {
+  background:
+    radial-gradient(circle at center, color-mix(in srgb, var(--character-accent) 42%, white) 0%, transparent 58%),
+    radial-gradient(circle at 30% 18%, rgba(15, 39, 64, 0.12), transparent 30%);
+  mix-blend-mode: screen;
+}
+
+.initials {
+  position: relative;
+  z-index: 1;
+  font-size: clamp(2.3rem, 6vw, 4.8rem);
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  color: color-mix(in srgb, var(--character-accent) 58%, #0f2740);
+  text-shadow:
+    0 0 24px rgba(255, 255, 255, 0.82),
+    0 8px 24px rgba(15, 39, 64, 0.14);
+}
+
+.caption {
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+  z-index: 1;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.74);
+  padding: 0.35rem 0.8rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+}
+
+.circle .caption {
+  bottom: 1.5rem;
+}

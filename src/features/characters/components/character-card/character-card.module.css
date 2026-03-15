@@ -1,0 +1,35 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid rgba(15, 39, 64, 0.08);
+  border-radius: var(--radius-lg);
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow: var(--color-shadow);
+  transition:
+    transform var(--transition-base),
+    box-shadow var(--transition-base),
+    border-color var(--transition-base);
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(24, 189, 223, 0.28);
+  box-shadow: 0 24px 40px rgba(15, 39, 64, 0.12);
+}
+
+.content {
+  padding: 1.15rem 1.25rem 1.35rem;
+}
+
+.title {
+  font-size: clamp(1.3rem, 2vw, 1.8rem);
+  font-weight: 700;
+  color: var(--color-brand-dark);
+}
+
+.subtitle {
+  margin-top: 0.4rem;
+  font-size: 1rem;
+  color: var(--color-text-secondary);
+}

@@ -1,0 +1,15 @@
+.page {
+  padding: clamp(2.25rem, 5vw, 4.5rem) 0 clamp(4rem, 7vw, 6rem);
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(1.75rem, 3vw, 2.75rem);
+}
+
+@media (min-width: 768px) {
+  .page {
+    padding-top: 30px;
+  }
+}

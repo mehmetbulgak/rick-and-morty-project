@@ -1,0 +1,31 @@
+.footer {
+  margin-top: auto;
+  border-top: 1px solid rgba(15, 39, 64, 0.05);
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 -12px 40px rgba(15, 39, 64, 0.04);
+}
+
+.inner {
+  display: flex;
+  min-height: var(--footer-height);
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.link {
+  font-size: clamp(1.25rem, 2vw, 1.8rem);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: var(--color-brand-dark);
+}
+
+@media (max-width: 767px) {
+  .inner {
+    min-height: 4.5rem;
+  }
+
+  .link {
+    font-size: 1.05rem;
+  }
+}

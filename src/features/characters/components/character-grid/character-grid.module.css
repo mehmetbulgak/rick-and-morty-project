@@ -1,0 +1,127 @@
+.section {
+  position: relative;
+  width: 100%;
+}
+
+.refreshState {
+  display: grid;
+  min-height: 18rem;
+  place-items: center;
+}
+
+.errorBanner {
+  margin: 0 auto 1.2rem;
+  border: 1px solid rgba(244, 63, 94, 0.22);
+  border-radius: 1.25rem;
+  background: rgba(255, 255, 255, 0.88);
+  padding: 0.85rem 1rem;
+  font-weight: 700;
+  color: var(--color-brand-dark);
+  box-shadow: var(--color-shadow-soft);
+}
+
+.statusBanner {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin: 0 auto 1.2rem;
+  border: 1px solid rgba(24, 189, 223, 0.18);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.86);
+  padding: 0.7rem 1rem;
+  color: var(--color-brand-dark);
+  box-shadow: var(--color-shadow-soft);
+  backdrop-filter: blur(14px);
+}
+
+.gridFrame {
+  transition:
+    opacity var(--transition-base),
+    filter var(--transition-base);
+}
+
+.grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.skeletonCard {
+  overflow: hidden;
+  border: 1px solid rgba(15, 39, 64, 0.08);
+  border-radius: var(--radius-lg);
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow: var(--color-shadow);
+}
+
+.skeletonMedia,
+.skeletonTitle,
+.skeletonSubtitle {
+  background:
+    linear-gradient(90deg, rgba(226, 232, 240, 0.9), rgba(241, 245, 249, 1), rgba(226, 232, 240, 0.9));
+  background-size: 200% 100%;
+  animation: shimmer 1.35s linear infinite;
+}
+
+.skeletonMedia {
+  aspect-ratio: 16 / 11;
+}
+
+.skeletonContent {
+  padding: 1.15rem 1.25rem 1.35rem;
+}
+
+.skeletonTitle {
+  height: 1.5rem;
+  border-radius: 999px;
+}
+
+.skeletonSubtitle {
+  width: 40%;
+  height: 1rem;
+  margin-top: 0.7rem;
+  border-radius: 999px;
+}
+
+.emptyState {
+  display: grid;
+  min-height: 16rem;
+  place-items: center;
+  border: 1px solid rgba(15, 39, 64, 0.08);
+  border-radius: calc(var(--radius-lg) + 0.25rem);
+  background: rgba(255, 255, 255, 0.72);
+  text-align: center;
+  box-shadow: var(--color-shadow-soft);
+}
+
+.emptyTitle {
+  font-size: 1.5rem;
+  color: var(--color-brand-dark);
+}
+
+.emptyDescription {
+  margin-top: 0.4rem;
+  color: var(--color-text-secondary);
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 200% 0;
+  }
+
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+@media (max-width: 640px) {
+  .errorBanner {
+    width: 100%;
+    text-align: center;
+  }
+
+  .statusBanner {
+    width: 100%;
+    justify-content: center;
+  }
+}
