@@ -1,6 +1,8 @@
 
 # rick-and-morty-project
 
+live link: https://rick-and-morty-project-app.netlify.app/
+
 Responsive character directory built on top of `rickandmortyapi.com`, based on the provided desktop and mobile designs.
 
 ## Tech Stack
